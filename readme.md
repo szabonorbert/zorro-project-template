@@ -13,9 +13,27 @@ This project is a custom Visual Studio solution folder, therefore you can build 
 
 ## Zorro setup requirements
 
-* My Zorro setup folder is C:\zorro\ but if you have different setup location you need to change this in the project files.<br />
-* In Zorro folder, you should make the `ZorroFix.ini` file, where you can define the strategy folder. My strategy folder is myStrategy and the solution copies the result files here, so I have a record in ZorroFix.ini file:
+* My Zorro setup folder is 'C:\zorro\' but if you have different setup location you need to change this in the Solution files.<br />
+* In Zorro folder, you should make the `ZorroFix.ini` file, where you can define the strategy folder. My strategy folder is 'myStrategy' and the solution copies the result files here, so I have a record in ZorroFix.ini file:
 ```
 StrategyFolder = "myStrategy"
 ```
 <https://zorro-project.com/manual/en/ini.htm>
+
+## Solution notes
+
+* It uses the following dependency: `C:\Zorro\Source\VC++\ZorroDLL.cpp`
+* It uses the following include directory: `C:\Zorro\include` (therefore you can import `<zorro.h>` in .cpp files)
+* Compiles neccessary files to project's `intermediate_dir` directory
+* Compiles result files to the project's `bin` directory
+* ...then copy .dll file from `bin` to `C:\Zorro\myStrategy` (32bit version: `projectfolder.dll`, 64bit version: `projectfolder64.dll`)
+* ...then you can run it from Zorro
+
+The Visual Studio Solution and project name is just "project", and the result DLL file's name is coming from the parent folder name with the following after-build script:
+```
+set "str=$(MSBuildProjectDirectory)"
+set "result=%str:\=" & set "result=%"
+Rem echo %result%
+copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%"64.dll"
+```
+In 64 bit version, you will see that DLL filenames end with "64", because it's neccessary for running with Zorro64.
