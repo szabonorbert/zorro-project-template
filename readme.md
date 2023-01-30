@@ -26,7 +26,7 @@ StrategyFolder = "myStrategy"
 * It uses the following include directory: `C:\Zorro\include` (therefore you can import `<zorro.h>` in .cpp files)
 * Compiles neccessary files to project's `intermediate_dir` directory
 * Compiles result files to the project's `bin` directory
-* ...then copy .dll file from `bin` to `C:\Zorro\myStrategy` (32bit version: `projectfolder.dll`, 64bit version: `projectfolder64.dll`)
+* ...then copy .dll file from `bin` to `C:\Zorro\myStrategy` (32bit version: `[project folder name].dll`, 64bit version: `[project folder name]64.dll`)
 * ...then you can run it from Zorro
 
 The Visual Studio Solution and project name is just "project", and the result DLL file's name is coming from the parent folder name with the following after-build script:
