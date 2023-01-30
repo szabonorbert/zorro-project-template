@@ -10,7 +10,7 @@ Zorro's native language is "lite-C", however it's built-in functions are totally
 
 ## How this project works
 
-This project is a custom Visual Studio Solution folder, therefore you can build as huge script as you want, you don't need to stuck on Zorro's folder, and you can version control your entire project. After compiling, the result dll file will be automatically copied to the Zorro's myStrategy folder, then you can run that immediately.
+This project is a custom Visual Studio Solution folder, therefore you can build as huge script as you want, you don't need to stuck on Zorro's folder, and you can version control your entire project. After compiling, the result DLL file will be automatically copied to the Zorro's myStrategy folder, then you can run that immediately.
 
 ## Zorro setup requirements
 
