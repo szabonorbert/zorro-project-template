@@ -29,7 +29,7 @@ StrategyFolder = "myStrategy"
 * ...then copy .dll file from `bin` to `C:\Zorro\myStrategy` (32bit version: `[project folder name].dll`, 64bit version: `[project folder name]64.dll`)
 * ...then you can run it from Zorro
 
-The Visual Studio Solution and project name is just "project", and the result DLL file's name is coming from the parent folder name with the following after-build script:
+The Visual Studio Solution and project name is just "project", and the result DLL file's name is coming from the parent folder name by the following after-build script, therefore you don't need to setup anything, just copy the sources and start the development.
 ```
 set "str=$(MSBuildProjectDirectory)"
 set "result=%str:\=" & set "result=%"
