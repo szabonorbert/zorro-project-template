@@ -8,9 +8,9 @@ An ideal starting point of a C++ Zorro project with Visual Studio.<br />
 ## C++ and Visual Studio
 Zorro's native language is "lite-C", however the built-in functions are totally compatible with C and C++ as expected. In the Zorro Help you can find a tutorial about setting up a project in Visual Studio and/or it's compiler for making Zorro scripts: "Developing Algo Trading Systems in C++". However it's not neccessarly fully documented, because there are some unmentioned gotchas you need to take care. I made this sample project to kickstart your development, therefore you don't need to do all the setup procedure every time you start to work on something new. I use Visual Studio 2022 simply because Zorro advise to use that - but I'm sure that any C++ compiler could to the work.
 
-## How this project works
+## About this Solution
 
-This project is a custom Visual Studio Solution folder, therefore
+This is a custom Visual Studio Solution folder, therefore
 
 * you can build as huge script as you want,
 * you don't need to stuck on Zorro's folder, and
