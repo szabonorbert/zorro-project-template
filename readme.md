@@ -41,10 +41,7 @@ So if you install Zorro to `C:\zorro` and you use `myStrategy` for strategy fold
 * It uses the following include directory: `$(ZorroLocation)\include` (therefore you can import `<zorro.h>` in .cpp files)
 * Compiles intermediate files to project's `tmp` directory
 * Compiles result files to the project's `bin` directory
-* ...then copy the result DLL file from `bin` to `$(ZorroLocation)\$(ZorroStrategyFolder)` [^1]
-
-[^1]:
-	32bit version: `[project folder name].dll`, 64bit version: `[project folder name]64.dll`)
+* ...then copy the result DLL file from `bin` to `$(ZorroLocation)\$(ZorroStrategyFolder)`
 
 ...then you can run it from Zorro.
 
