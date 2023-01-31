@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\zorro\Source\VC++\ZorroDLL.cpp" />
+    <ClCompile Include="$(ZorroLocation)\Source\VC++\ZorroDLL.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -63,38 +63,42 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="ZorroProperties.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="ZorroProperties.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="ZorroProperties.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="ZorroProperties.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>bin\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\zorro\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ZorroLocation)\include</IncludePath>
     <TargetName>$(ProjectName)</TargetName>
-    <IntDir>intermediate_dir\</IntDir>
+    <IntDir>tmp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>bin</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\zorro\include</IncludePath>
-    <IntDir>intermediate_dir</IntDir>
+    <OutDir>bin\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ZorroLocation)\include</IncludePath>
+    <IntDir>tmp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>bin</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\zorro\include</IncludePath>
-    <IntDir>intermediate_dir</IntDir>
+    <OutDir>bin\</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ZorroLocation)\include</IncludePath>
+    <IntDir>tmp\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>bin\</OutDir>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\zorro\include</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(ZorroLocation)\include</IncludePath>
     <TargetName>$(ProjectName)</TargetName>
-    <IntDir>intermediate_dir\</IntDir>
+    <IntDir>tmp\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -116,7 +120,7 @@
       <Command>set "str=$(MSBuildProjectDirectory)"
 set "result=%str:\=" &amp; set "result=%"
 Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%".dll"</Command>
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%".dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,7 +147,7 @@ copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%".dll"</Co
       <Command>set "str=$(MSBuildProjectDirectory)"
 set "result=%str:\=" &amp; set "result=%"
 Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%".dll"</Command>
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%".dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -166,7 +170,7 @@ copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%".dll"</Co
       <Command>set "str=$(MSBuildProjectDirectory)"
 set "result=%str:\=" &amp; set "result=%"
 Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%"64.dll"</Command>
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%"64.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -193,7 +197,7 @@ copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%"64.dll"</
       <Command>set "str=$(MSBuildProjectDirectory)"
 set "result=%str:\=" &amp; set "result=%"
 Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "C:\zorro\myStrategy\"%result%"64.dll"</Command>
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%"64.dll"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
