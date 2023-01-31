@@ -31,7 +31,7 @@ StrategyFolder = "myStrategy"
 There are only 2 variables you need to check before using this Solution. You can find them in the `ZorroProperties.props`, which is a simple text file.
 
 * `ZorroLocation` is the install folder of Zorro **without trailing slash**. Default value is `C:\zorro`.
-* `ZorroStrategyFolder` is the folder in the Zorro location, where you keep you strategies pointed by `ZorroFix.ini`. Default value is `myStrategy`.
+* `ZorroStrategyFolder` is the folder in the Zorro location, where you keep your strategies, pointed by `ZorroFix.ini`. Default value is `myStrategy`.
 
 So if you install Zorro to `C:\zorro` and you use `myStrategy` for strategy folder, you don't need to change anything.
 
