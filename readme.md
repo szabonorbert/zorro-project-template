@@ -55,4 +55,4 @@ set "result=%str:\=" & set "result=%"
 Rem echo %result%
 copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%"64.dll"
 ```
-In 64 bit version, you will see that DLL filenames end with "64", because it's neccessary for running with Zorro64.
+In 64 bit version, you will see that DLL filenames end with "64", because it's neccessary for running with Zorro64. Also note that if you don't have Zorro S subscription you can only run DLLs created in Release mode.
