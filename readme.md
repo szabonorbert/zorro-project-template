@@ -1,5 +1,5 @@
-# Zorro project sample
-An ideal starting point of a C++ Zorro project with Visual Studio<br />
+# Zorro project template
+An ideal starting point of a C++ Zorro project with Visual Studio.<br />
 
 ## What is Zorro?
 >Zorro is a free institutional-grade software tool for data collection, financial research, and algorithmic trading with C / C++.  It's compact, portable, easy to learn, and magnitudes faster than R or Python. It does anything that automated trading platforms do - only better. Zorro offers extreme flexibility and features otherwise not found in consumer trading software. Any data analysis, visualization, or algo trading system can be realized with a small C or C++ script. R and Python machine learning libraries are also supported.
@@ -10,7 +10,7 @@ Zorro's native language is "lite-C", however it's built-in functions are totally
 
 ## How this project works
 
-This project is a custom Visual Studio Solution folder, therefore you can build as huge script as you want, you don't need to stuck on Zorro's folder, and you can version control your entire project. After compiling, the result DLL file will be automatically copied to the Zorro's myStrategy folder, then you can run that immediately.
+This project is a custom Visual Studio Solution folder, therefore you can build as huge script as you want, you don't need to stuck on Zorro's folder, and you can version control your entire project. After compiling, the result DLL file will be automatically copied to the Zorro's `myStrategy` folder, then you can run that immediately.
 
 ## Zorro setup requirements
 
@@ -23,14 +23,14 @@ StrategyFolder = "myStrategy"
 
 ## Solution notes
 
-* It uses the following dependency: `C:\Zorro\Source\VC++\ZorroDLL.cpp`
-* It uses the following include directory: `C:\Zorro\include` (therefore you can import `<zorro.h>` in .cpp files)
+* It uses the following dependency: `C:\zorro\Source\VC++\ZorroDLL.cpp`
+* It uses the following include directory: `C:\zorro\include` (therefore you can import `<zorro.h>` in .cpp files)
 * Compiles neccessary files to project's `intermediate_dir` directory
 * Compiles result files to the project's `bin` directory
-* ...then copy .dll file from `bin` to `C:\Zorro\myStrategy` (32bit version: `[project folder name].dll`, 64bit version: `[project folder name]64.dll`)
+* ...then copy the result .dll file from `bin` to `C:\Zorro\myStrategy` (32bit version: `[project folder name].dll`, 64bit version: `[project folder name]64.dll`)
 * ...then you can run it from Zorro
 
-The Visual Studio Solution and project name is just "project", and the result DLL file's name is coming from the parent folder name by the following after-build script, therefore you don't need to setup anything, just copy the sources and start the development.
+The Visual Studio Solution and project name is simply just "project", and the result DLL file's name is coming from the parent folder name by the following after-build script, therefore you don't need to setup or rename anything, just copy the sources to a different folder and start the development. The after-build script:
 ```
 set "str=$(MSBuildProjectDirectory)"
 set "result=%str:\=" & set "result=%"
