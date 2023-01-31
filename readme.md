@@ -16,7 +16,7 @@ This project is a custom Visual Studio Solution folder, therefore
 * you don't need to stuck on Zorro's folder, and
 * you can version control your entire project.
 
-The result DLL file will be automatically copied to your Zorro's strategy folder, then you can run that script immediately.
+The result DLL file will be automatically copied to your Zorro's strategy folder, then you can run that script immediately. To start editing you just need to open the `project.sln` with Visual Studio (not Visual Studio Code).
 
 ## Zorro's custom strategy folder
 
