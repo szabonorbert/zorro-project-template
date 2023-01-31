@@ -10,11 +10,11 @@ Zorro's native language is "lite-C", however the built-in functions are totally 
 
 ## About this Solution
 
-This is a custom Visual Studio Solution folder, therefore
+This is a custom Visual Studio 2022 Solution folder, therefore
 
-* you can build as huge script as you want,
-* you don't need to stuck on Zorro's folder, and
-* you can version control your entire project.
+* you can build as huge software as you want even with a complex structure without messing up the strategy folder,
+* you don't need to squeeze you files to Zorro's standard folders, and
+* you can version control your entire project independently from your other strategies.
 
 The result DLL file will be automatically copied to your Zorro's strategy folder, then you can run that script immediately. To start editing you just need to open the `project.sln` with Visual Studio (not Visual Studio Code).
 
