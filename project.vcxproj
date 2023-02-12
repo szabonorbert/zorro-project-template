@@ -118,9 +118,11 @@
     </Link>
     <PostBuildEvent>
       <Command>set "str=$(MSBuildProjectDirectory)"
-set "result=%str:\=" &amp; set "result=%"
-Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%".dll"</Command>
+set "filename=%str:\=" &amp; set "filename=%"
+set "fileextension=.dll"
+set "filename=%filename%%fileextension%"
+echo result: %filename%
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%filename%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -145,9 +147,11 @@ copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)
     </Link>
     <PostBuildEvent>
       <Command>set "str=$(MSBuildProjectDirectory)"
-set "result=%str:\=" &amp; set "result=%"
-Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%".dll"</Command>
+set "filename=%str:\=" &amp; set "filename=%"
+set "fileextension=.dll"
+set "filename=%filename%%fileextension%"
+echo result: %filename%
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%filename%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -168,9 +172,11 @@ copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)
     </Link>
     <PostBuildEvent>
       <Command>set "str=$(MSBuildProjectDirectory)"
-set "result=%str:\=" &amp; set "result=%"
-Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%"64.dll"</Command>
+set "filename=%str:\=" &amp; set "filename=%"
+set "fileextension=64.dll"
+set "filename=%filename%%fileextension%"
+echo result: %filename%
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%filename%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -195,9 +201,11 @@ copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)
     </Link>
     <PostBuildEvent>
       <Command>set "str=$(MSBuildProjectDirectory)"
-set "result=%str:\=" &amp; set "result=%"
-Rem echo %result%
-copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%result%"64.dll"</Command>
+set "filename=%str:\=" &amp; set "filename=%"
+set "fileextension=64.dll"
+set "filename=%filename%%fileextension%"
+echo result: %filename%
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%filename%</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
