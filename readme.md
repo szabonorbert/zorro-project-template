@@ -24,11 +24,12 @@ The result DLL file will be automatically copied to your Zorro's strategy folder
 
 ## Zorro's custom strategy folder
 
-It's recommended to create a custom strategy folder where you can keep all your scripts separately from the standard Zorro sample projects. You can do this simply by define the strategy folder in the `ZorroFix.ini` file of the root folder like this:
+I recommend you to create a custom strategy folder where you can keep all your scripts separately from the standard Zorro sample projects. You can do this simply by define the strategy folder in the `ZorroFix.ini` file of the root folder like this:
 ```
 StrategyFolder = "myStrategy"
 ```
 <https://zorro-project.com/manual/en/ini.htm>
+
 
 ## Solution config
 
