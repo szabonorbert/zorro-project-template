@@ -1,12 +1,16 @@
-
 # Zorro project template
-An ideal starting point of a C++ Zorro project with Visual Studio.<br />
+An ideal starting point of a C++ Zorro project with Visual Studio.
+
+> [!NOTE]
+> This template was made for Visual Studio. If you need a template for Visual Studio Code (VSCode), have a look at the [szabonorbert/zorro-vscode-template](https://github.com/szabonorbert/zorro-vscode-template) repository.</b>
 
 ## What is Zorro?
 >Zorro is a free institutional-grade software tool for data collection, financial research, and algorithmic trading with C / C++.  It's compact, portable, easy to learn, and magnitudes faster than R or Python. It does anything that automated trading platforms do - only better. Zorro offers extreme flexibility and features otherwise not found in consumer trading software. Any data analysis, visualization, or algo trading system can be realized with a small C or C++ script. R and Python machine learning libraries are also supported. _–_ <https://zorro-project.com/>
 
-## C++ and Visual Studio
-Zorro's native language is "lite-C", however the built-in functions are totally compatible with C and C++ as expected. In the Zorro Help you can find a tutorial about setting up a project in Visual Studio and/or it's compiler for making Zorro scripts: "Developing Algo Trading Systems in C++". I made this sample project to kickstart your development, therefore you don't need to do all the setup procedure every time you start to work on something new. I use Visual Studio 2022 simply because Zorro advise to use that - but I'm sure that any C++ compiler could to the work.
+## Zorro, C++, and Visual Studio
+Zorro's native language is "lite-C", however the built-in functions are totally compatible with C and C++ as expected. In the Zorro Help you can find a tutorial about setting up a project in Visual Studio and/or it's compiler for making Zorro scripts: [Developing Algo Trading Systems in C++](https://zorro-project.com/manual/en/dlls.htm).
+
+I made this sample project to kickstart your development, therefore you don't need to do all the setup procedure every time you start to work on something new. I use Visual Studio 2022 simply because Zorro advise to use that - but I'm sure that any C++ compiler could to the work.
 
 ## About this Solution
 
