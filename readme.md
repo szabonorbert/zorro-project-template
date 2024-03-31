@@ -1,30 +1,24 @@
-# Zorro project template
-An ideal starting point of a C++ Zorro project with Visual Studio.
+# Zorro project template for Visual Studio
 
-> [!NOTE]
-> This template was made for Visual Studio. If you need a template for Visual Studio Code (VSCode), have a look at the [szabonorbert/zorro-vscode-template](https://github.com/szabonorbert/zorro-vscode-template) repository.</b>
-
-## What is Zorro?
->Zorro is a free institutional-grade software tool for data collection, financial research, and algorithmic trading with C / C++.  It's compact, portable, easy to learn, and magnitudes faster than R or Python. It does anything that automated trading platforms do - only better. Zorro offers extreme flexibility and features otherwise not found in consumer trading software. Any data analysis, visualization, or algo trading system can be realized with a small C or C++ script. R and Python machine learning libraries are also supported. _–_ <https://zorro-project.com/>
-
-## Zorro, C++, and Visual Studio
-Zorro's native language is "lite-C", however the built-in functions are totally compatible with C and C++ as expected. In the Zorro Help you can find a tutorial about setting up a project in Visual Studio and/or it's compiler for making Zorro scripts: [Developing Algo Trading Systems in C++](https://zorro-project.com/manual/en/dlls.htm).
-
-I made this sample project to kickstart your development, therefore you don't need to do all the setup procedure every time you start to work on something new. I use Visual Studio 2022 simply because Zorro advise to use that - but I'm sure that any C++ compiler could to the work.
-
-## About this Solution
-
-This is a custom Visual Studio 2022 Solution folder, therefore
+An ideal starting point of a C++ [Zorro](https://zorro-project.com/) project with Microsoft Visual Studio. You can edit and compile directly from the Visual Studio IDE, therefore
 
 * you can build as huge software as you want even with a complex structure without messing up the strategy folder,
 * you don't need to squeeze your files to Zorro's standard folders, and
 * you can version control your entire project independently from your other strategies.
 
-The result DLL file will be automatically copied to your Zorro's strategy folder, then you can run that script immediately. To start editing you just need to open the `project.sln` with Visual Studio (not Visual Studio Code).
+The result DLL file will be automatically copied to your Zorro's strategy folder, then you can run that script immediately. To start editing you just need to open the `project.sln` with Visual Studio.
+
+> [!NOTE]
+> This template was made for Visual Studio. If you need a template for Visual Studio Code (VSCode), have a look at the [szabonorbert/zorro-vscode-template](https://github.com/szabonorbert/zorro-vscode-template) repository.</b>
+
+## Zorro, C++, and Visual Studio
+Zorro's native language is "lite-C", however the built-in functions are totally compatible with C and C++ as expected. In the Zorro Help you can find a tutorial about setting up a project in Visual Studio and/or it's compiler for making Zorro scripts: [Developing Algo Trading Systems in C++](https://zorro-project.com/manual/en/dlls.htm).
+
+I made this sample project to kickstart your development, therefore you don't need to do all the setup procedure everytime you start working on something new. I use Visual Studio 2022 simply because Zorro advise to use that - but I'm sure that any C++ compiler could to the work.
 
 ## Zorro's custom strategy folder
 
-I recommend you to create a custom strategy folder where you can keep all your scripts separately from the standard Zorro sample projects. You can do this simply by define the strategy folder in the `ZorroFix.ini` file of the root folder like this:
+I recommend you to create a custom strategy folder where you can keep all your scripts separately from the standard Zorro sample projects. You can do this simply by define the strategy folder in ```ZorroFix.ini```:
 ```
 StrategyFolder = "myStrategy"
 ```
