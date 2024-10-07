@@ -151,7 +151,7 @@ set "filename=%str:\=" &amp; set "filename=%"
 set "fileextension=.dll"
 set "filename=%filename%%fileextension%"
 echo result: %filename%
-copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%filename%</Command>
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\%filename%"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -205,7 +205,7 @@ set "filename=%str:\=" &amp; set "filename=%"
 set "fileextension=64.dll"
 set "filename=%filename%%fileextension%"
 echo result: %filename%
-copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\"%filename%</Command>
+copy /Y "$(TargetDir)$(TargetName).dll" "$(ZorroLocation)\$(ZorroStrategyFolder)\%filename%"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
